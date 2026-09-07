@@ -1,0 +1,29 @@
+$(function(){
+
+    // 팝업
+    $("#btn_open").click(function(){
+        $(".popup").addClass("on")
+    })
+
+    $(".btn_close").click(function(){
+        $(".popup").removeClass("on")
+    })
+
+
+    // 탭메뉴
+    $(".tabs>a").click(function(){
+        $(".tabs>a").removeClass("on")
+        $(this).addClass("on")
+        let idx = $(this).index()
+        $(".tabcontents>ul").removeClass("on")
+        $(".tabcontents>ul").eq(idx).addClass("on")
+    })
+
+    // 슬라이드
+    let count = 0;
+    setInterval(function(){
+        count++
+        if(count>2){count=0}
+        $(".train").css("transform", `translateY(${-33.333*count}%)`)
+    }, 2500)
+})

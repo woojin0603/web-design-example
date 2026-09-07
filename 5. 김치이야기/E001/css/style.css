@@ -1,0 +1,176 @@
+@charset "utf-8";
+*{margin: 0; padding: 0;}
+a{text-decoration: inherit; color: inherit;}
+ul{list-style: none;}
+img{max-width: 100%;}
+html{background-color: #fff; color: #333;}
+
+.container{
+    height: 850px;
+    display: flex;
+}
+
+header{
+    width: 200px;
+    background-color: salmon;
+}
+
+.logo{
+    margin: 20px 0;
+}
+
+.gnb{
+    width: 180px;
+    margin: 0 auto;
+}
+
+.gnb a{
+    width: 180px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.gnb ul{
+    height: 0;
+    overflow: hidden;
+    background-color: #fff;
+    transition: all 0.6s ease 0s;
+}
+
+.gnb>li:hover ul{
+    height: 210px;
+}
+
+.gnb>li>ul>li:hover a{
+    background-color: #000;
+    color: #fff;
+}
+
+.spot{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.spot>li{
+    flex: 1;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.contents{
+    width: 400px;
+}
+
+.banner{
+    display: flex;
+    align-items: center;
+    
+    height: 400px;
+}
+
+.bannertxt{
+    width: 300px;
+   
+}
+
+.notice li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.gall{
+    display: flex;
+    justify-content: space-between;
+}
+
+.direct{
+    display: flex;
+    justify-content: space-between;
+}
+
+.station{
+    width: calc(100% - 600px);
+    height: 850px;
+    overflow: hidden;
+}
+
+.train{
+    width: 300%;
+    height: 100%;
+    transition: all 0.6s ease 0s;
+    display: flex;
+}
+
+.train>li{
+    width: 33.333%;
+    height: 100%;
+}
+
+.train>li img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+footer{
+    height: 120px;
+    background-color: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+}
+
+.fmenu{
+    display: flex;
+}
+
+.fmenu>li{
+    margin: 20px;
+    text-decoration: underline;
+}
+
+.modal{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: #000;
+    opacity: 0.3;
+    z-index: 500;
+    display: none;
+}
+
+.modal.on{
+    display: block;
+}
+
+.popup{
+    position: fixed;
+    left: 300px;
+    top: 300px;
+    width: 300px;
+    padding: 30px;
+    background-color: #fff;
+    border: 2px solid #000;
+    display: none;
+}
+
+.popup.on{
+    display: block;
+}
+
+.popup_ctl{
+    margin-top: 30px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn_close{
+    padding: 8px;
+    border: 1px solid #000;
+    cursor: pointer;
+}
